@@ -322,6 +322,49 @@
     transform: scale(1.05);
 }
 
+.module-media {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.module-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.module:hover .module-media img {
+    transform: scale(1.05);
+}
+
+.module-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(15,23,42,0.1) 0%,
+        rgba(15,23,42,0.6) 100%
+    );
+}
+
+.media-label {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    background: rgba(15,23,42,0.8);
+    border-radius: 6px;
+    color: #94a3b8;
+}
+
+.module-body {
+    padding: 30px;
+}
+        
 @media (max-width: 900px) {
     .hero-content-wrapper {
         flex-direction: column-reverse;
@@ -386,34 +429,37 @@
         <div class="modules">
 
             <article class="module">
-    
-    <div class="module-image-wrapper">
-        <img src="assets/fortnite-banner.png" alt="Fortnite-inspired simulation banner">
+
+    <div class="module-media">
+        <img src="assets/fortnite-banner.png" alt="Fortnite-inspired simulation">
+        <div class="media-label">Inspired by Fortnite mechanics</div>
     </div>
 
-    <div class="module-header">
-        <h3>Fortnite Graph Loot Engine</h3>
-        <span class="tag">C++17</span>
+    <div class="module-body">
+        <div class="module-header">
+            <h3>Fortnite Graph Loot Engine</h3>
+            <span class="tag">C++17</span>
+        </div>
+
+        <p>
+            Weighted, undirected graph simulation implementing Dijkstra’s
+            shortest-path algorithm and probabilistic loot generation systems.
+        </p>
+
+        <ul class="module-features">
+            <li>Graph-based world modeling</li>
+            <li>Shortest-path computation</li>
+            <li>Weighted probability pools</li>
+            <li>Structured game loop architecture</li>
+        </ul>
+
+        <div class="module-links">
+            <a href="https://github.com/CPP-Programming-Assingments/GraphLoot-Engine" target="_blank">Source</a>
+            <a href="https://www.onlinegdb.com/Ay8gTHQf_" target="_blank">Live Demo</a>
+        </div>
     </div>
 
-    <p>
-        Weighted, undirected graph simulation implementing Dijkstra’s
-        shortest-path algorithm and probabilistic loot generation systems.
-    </p>
-
-    <ul class="module-features">
-        <li>Graph-based world modeling</li>
-        <li>Shortest-path computation</li>
-        <li>Weighted probability pools</li>
-        <li>Structured game loop architecture</li>
-    </ul>
-
-    <div class="module-links">
-        <a href="https://github.com/CPP-Programming-Assingments/GraphLoot-Engine" target="_blank">Source</a>
-        <a href="https://www.onlinegdb.com/Ay8gTHQf_" target="_blank">Live Demo</a>
-    </div>
 </article>
-
 
             <article class="module">
                 <div class="module-header">
