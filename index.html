@@ -290,6 +290,38 @@
     transform: scale(1.03);
 }
 
+        .module-image-wrapper {
+    margin: -35px -35px 25px -35px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.module-image-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.module-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(15,23,42,0.1) 0%,
+        rgba(15,23,42,0.4) 70%,
+        rgba(15,23,42,0.8) 100%
+    );
+}
+
+.module:hover .module-image-wrapper img {
+    transform: scale(1.05);
+}
+
 @media (max-width: 900px) {
     .hero-content-wrapper {
         flex-direction: column-reverse;
@@ -354,28 +386,33 @@
         <div class="modules">
 
             <article class="module">
-                <div class="module-header">
-                    <h3>Fortnite Graph Loot Engine</h3>
-                    <span class="tag">C++17</span>
-                </div>
+    
+    <div class="module-image-wrapper">
+        <img src="assets/fortnite-banner.png" alt="Fortnite-inspired simulation banner">
+    </div>
 
-                <p>
-                    Weighted, undirected graph simulation implementing Dijkstra’s
-                    shortest-path algorithm and probabilistic loot generation systems.
-                </p>
+    <div class="module-header">
+        <h3>Fortnite Graph Loot Engine</h3>
+        <span class="tag">C++17</span>
+    </div>
 
-                <ul class="module-features">
-                    <li>Graph-based world modeling</li>
-                    <li>Shortest-path computation</li>
-                    <li>Weighted probability pools</li>
-                    <li>Structured game loop architecture</li>
-                </ul>
+    <p>
+        Weighted, undirected graph simulation implementing Dijkstra’s
+        shortest-path algorithm and probabilistic loot generation systems.
+    </p>
 
-                <div class="module-links">
-                    <a href="https://github.com/CPP-Programming-Assingments/GraphLoot-Engine" target="_blank">Source</a>
-                    <a href="https://www.onlinegdb.com/Ay8gTHQf_" target="_blank">Live Demo</a>
-                </div>
-            </article>
+    <ul class="module-features">
+        <li>Graph-based world modeling</li>
+        <li>Shortest-path computation</li>
+        <li>Weighted probability pools</li>
+        <li>Structured game loop architecture</li>
+    </ul>
+
+    <div class="module-links">
+        <a href="https://github.com/CPP-Programming-Assingments/GraphLoot-Engine" target="_blank">Source</a>
+        <a href="https://www.onlinegdb.com/Ay8gTHQf_" target="_blank">Live Demo</a>
+    </div>
+</article>
 
 
             <article class="module">
