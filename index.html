@@ -159,6 +159,81 @@
             padding: 40px;
             color: var(--muted);
         }
+        .modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.module {
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.module:hover {
+    transform: translateY(-8px);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.module h3 {
+    font-size: 1.25rem;
+}
+
+.tag {
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.module p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.module-features {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.module-features li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+.module-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+}
+
+.module-links a {
+    margin-right: 20px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.module-links a:hover {
+    text-decoration: underline;
+}
     </style>
 </head>
 <body>
@@ -199,48 +274,84 @@
     </section>
 
     <section id="projects" class="section alt">
-        <div class="container">
-            <h2>Highlighted Projects</h2>
+    <div class="container">
+        <h2>Highlighted Projects</h2>
 
-            <div class="project-grid">
+        <div class="modules">
 
-                <div class="card">
+            <article class="module">
+                <div class="module-header">
                     <h3>Fortnite Graph Loot Engine</h3>
-                    <p>
-                        C++17 engine modeling a weighted graph world with Dijkstra’s algorithm
-                        and probabilistic loot systems.
-                    </p>
-                    <div class="card-links">
-                        <a href="https://github.com/CPP-Programming-Assingments/GraphLoot-Engine" target="_blank">Source</a>
-                        <a href="https://www.onlinegdb.com/Ay8gTHQf_" target="_blank">Live Demo</a>
-                    </div>
+                    <span class="tag">C++17</span>
                 </div>
 
-                <div class="card">
+                <p>
+                    Weighted, undirected graph simulation implementing Dijkstra’s
+                    shortest-path algorithm and probabilistic loot generation systems.
+                </p>
+
+                <ul class="module-features">
+                    <li>Graph-based world modeling</li>
+                    <li>Shortest-path computation</li>
+                    <li>Weighted probability pools</li>
+                    <li>Structured game loop architecture</li>
+                </ul>
+
+                <div class="module-links">
+                    <a href="https://github.com/CPP-Programming-Assingments/GraphLoot-Engine" target="_blank">Source</a>
+                    <a href="https://www.onlinegdb.com/Ay8gTHQf_" target="_blank">Live Demo</a>
+                </div>
+            </article>
+
+
+            <article class="module">
+                <div class="module-header">
                     <h3>Agile Data Processor</h3>
-                    <p>
-                        Advanced C system demonstrating dynamic memory allocation,
-                        real-time data handling, and algorithmic efficiency.
-                    </p>
-                    <div class="card-links">
-                        <a href="https://github.com/C-Coding-Assignments/Agile-Data-Processor" target="_blank">Source</a>
-                    </div>
+                    <span class="tag">C</span>
                 </div>
 
-                <div class="card">
+                <p>
+                    Real-time data processing engine emphasizing dynamic memory
+                    management and algorithmic efficiency.
+                </p>
+
+                <ul class="module-features">
+                    <li>Dynamic allocation & deallocation</li>
+                    <li>High-efficiency dataset manipulation</li>
+                    <li>Structured procedural architecture</li>
+                </ul>
+
+                <div class="module-links">
+                    <a href="https://github.com/C-Coding-Assignments/Agile-Data-Processor" target="_blank">Source</a>
+                </div>
+            </article>
+
+
+            <article class="module">
+                <div class="module-header">
                     <h3>Dynamic Data Manipulator</h3>
-                    <p>
-                        Multi-program C system focused on pointer arithmetic,
-                        file handling, and structured data transformations.
-                    </p>
-                    <div class="card-links">
-                        <a href="https://github.com/C-Coding-Assignments/Dynamic-Data-Manipulator" target="_blank">Source</a>
-                    </div>
+                    <span class="tag">C</span>
                 </div>
 
-            </div>
+                <p>
+                    Multi-program system demonstrating pointer arithmetic,
+                    file handling, and structured data transformations.
+                </p>
+
+                <ul class="module-features">
+                    <li>Pointer-based data traversal</li>
+                    <li>File I/O pipelines</li>
+                    <li>Multi-component coordination</li>
+                </ul>
+
+                <div class="module-links">
+                    <a href="https://github.com/C-Coding-Assignments/Dynamic-Data-Manipulator" target="_blank">Source</a>
+                </div>
+            </article>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="contact" class="section">
         <div class="container">
