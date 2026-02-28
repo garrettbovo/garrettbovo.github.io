@@ -69,6 +69,22 @@
             text-align: center;
         }
 
+        .hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+        circle,
+        rgba(59,130,246,0.25) 0%,
+        rgba(59,130,246,0.05) 50%,
+        transparent 70%
+    );
+    top: -150px;
+    right: -150px;
+    z-index: 0;
+}
+
         .hero-content h1 {
             font-size: 3rem;
             margin-bottom: 20px;
@@ -251,10 +267,29 @@
     gap: 60px;
 }
 
-.hero-text {
-    flex: 1;
+.hero-text h1 {
+    font-size: clamp(2.8rem, 5vw, 3.8rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
 }
 
+.hero-subtitle {
+    max-width: 600px;
+    color: #94a3b8;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-accent {
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin: 0 0 25px 0;
+    border-radius: 2px;
+}
+        
 .hero-image {
     flex: 0 0 280px;
     display: flex;
@@ -265,11 +300,34 @@
 .hero-image::before {
     content: "";
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(59,130,246,0.35) 0%, rgba(59,130,246,0.05) 60%, transparent 70%);
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(
+        circle,
+        rgba(59,130,246,0.4) 0%,
+        rgba(59,130,246,0.08) 60%,
+        transparent 75%
+    );
     border-radius: 50%;
     z-index: 0;
+    filter: blur(10px);
+}
+
+        .hero-text,
+.hero-image {
+    animation: fadeUp 0.9s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-image img {
@@ -394,6 +452,7 @@
     <div class="hero-content-wrapper">
         <div class="hero-text">
             <h1>Garrett Ellis</h1>
+            <div class="hero-accent"></div>
             <p class="hero-subtitle">
                 C & C++ Developer specializing in systems programming,
                 performance optimization, and algorithmic design.
