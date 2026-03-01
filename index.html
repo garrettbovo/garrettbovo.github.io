@@ -498,6 +498,24 @@
     border-color: var(--accent);
     color: var(--accent);
 }
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-lead {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.about-container p {
+    color: var(--muted);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
         
 @media (max-width: 900px) {
     .hero-content-wrapper {
@@ -546,17 +564,29 @@
     </div>
 </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About</h2>
-            <p>
-                I build structured, performance-oriented software in C and C++,
-                with a focus on memory management, data structures, and clean architectural design.
-                My work spans production web automation systems and advanced systems-level projects
-                developed from first principles.
-            </p>
-        </div>
-    </section>
+    <section id="about" class="section about-section">
+    <div class="container about-container">
+        <h2>About</h2>
+
+        <p class="about-lead">
+            Software developer with professional experience in production web systems 
+            and a strong focus on C++ programming, data structures, graph algorithms, 
+            and systems-oriented design.
+        </p>
+
+        <p>
+            In my professional role, I develop and maintain internal and public-facing 
+            web platforms using HTML, CSS, and JavaScript within the PowerDNN framework, 
+            supporting both external users and internal stakeholders.
+        </p>
+
+        <p>
+            I also build and maintain SharePoint-based sites to manage content, workflows, 
+            and documentation, ensuring accuracy, structural consistency, and long-term 
+            maintainability across production environments.
+        </p>
+    </div>
+</section>
 
     <section id="projects" class="section alt">
     <div class="container">
